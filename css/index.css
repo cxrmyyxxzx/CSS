@@ -1,0 +1,26 @@
+/*  总体布局  */
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 页面头部 */
+#CSSHeader{
+    
+}
+
+/* 页面主体 */
+#CSSIndexContainer{
+    flex: 1;
+}
+
+/* 页面脚部 */
+#CSSFooter{
+    color:#000;
+    background-color:#fff;
+}
+
