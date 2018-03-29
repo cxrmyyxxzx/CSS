@@ -7,18 +7,19 @@ $(document).ready(function(){
     $("#loginButton").click(function(){
         var userName = $("#userName").val();
         var password = $("#password").val();
-        var loginData = {userName:userName,password:password};
         //js&php通信
         $.ajax({
             type: 'POST',
-            dataType:'json',
-            url: '../php/index.php',
-            data:loginData,
-            cache: true,
+/*             dataType:'json', */
+            url: '../php/index.php?action=login',
+            data:{name:userName,pswd:password},
+            cache: false,
             success: function(response){
-                alert(response);
+                console.log(response);
             },
-            error: function (msg) {}	
+            error: function (msg) {
+                alert('3');
+            }	
         });
         
     });
