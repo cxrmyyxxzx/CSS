@@ -10,15 +10,15 @@ $(document).ready(function(){
         //js&php通信
         $.ajax({
             type: 'POST',
-/*             dataType:'json', */
+            dataType:'json',
             url: '../php/index.php?action=login',
             data:{name:userName,pswd:password},
             cache: false,
             success: function(response){
-                console.log(response);
+                console.log(response.status);
             },
             error: function (msg) {
-                alert('3');
+                console.log('通讯错误');
             }	
         });
         
